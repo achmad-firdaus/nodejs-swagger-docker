@@ -1,0 +1,13 @@
+version: '3'
+services:
+  express-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      # - .:/usr/src/app/
+      - ./index.js:/usr/src/app/index.js
+      - ./api.json:/usr/src/app/api.json
+      # - ./.env:/usr/src/app/.env
